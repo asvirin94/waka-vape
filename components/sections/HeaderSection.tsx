@@ -1,15 +1,18 @@
+"use client";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 
-interface HeaderSectionProps {
-  mobileMenuOpen: boolean;
-  setMobileMenuOpen: (open: boolean) => void;
-  scrollToSection: (sectionId: string) => void;
-}
-
-export const HeaderSection: React.FC<HeaderSectionProps> = ({ mobileMenuOpen, setMobileMenuOpen, scrollToSection }) => (
+export const HeaderSection: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const scrollToSection = (sectionId: string) => {
+    if (typeof window !== "undefined") {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
+    }
+  };
+  return (
   <header className="h-16 md:h-20 bg-black relative z-50">
     <div className="container mx-auto px-4 lg:px-6 flex items-center h-full">
       <Link href="/" className="flex items-center justify-center">
@@ -95,6 +98,7 @@ export const HeaderSection: React.FC<HeaderSectionProps> = ({ mobileMenuOpen, se
       </nav>
     </div>
   </header>
-);
+  );
+}
 
 export default HeaderSection; 

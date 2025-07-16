@@ -1,12 +1,15 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Handshake, Flame } from "lucide-react";
 import React from "react";
 
-interface HeroSectionProps {
-  scrollToSection: (sectionId: string) => void;
-}
-
-const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => (
+const HeroSection: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    if (typeof window !== "undefined") {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  return (
   <section className="w-full py-12 md:py-20 bg-black diagonal-stripes relative overflow-hidden">
     <div className="container mx-auto px-4 md:px-6 relative z-10">
       <div className="flex flex-col items-center text-center">
@@ -52,6 +55,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToSection }) => (
       </div>
     </div>
   </section>
-);
+  );
+}
 
 export default HeroSection; 
