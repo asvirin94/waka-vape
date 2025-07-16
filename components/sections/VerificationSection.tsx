@@ -47,7 +47,6 @@ const VerificationSection: React.FC = () => (
               controls
               autoPlay
               muted
-              loading="lazy"
             >
               <source src="/instruction.mp4" type="video/mp4" />
               Ваш браузер не поддерживает видео.
