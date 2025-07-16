@@ -18,7 +18,7 @@ const FooterSection: React.FC = () => (
           </div>
           <p className="font-black text-sm md:text-base text-white leading-tight max-w-md">
             ИННОВАЦИОННЫЕ ОДНОРАЗОВЫЕ ЭЛЕКТРОННЫЕ СИГАРЕТЫ С УЗНАВАЕМЫМ ДИЗАЙНОМ И ВЗРЫВНЫМИ ВКУСАМИ. ДЕЛАЕМ ВЕЙПИНГ
-            КРУТЫМ С 2019 ГОДА! 🚀
+            КРУТЫМ С 2019 ГОДА!
           </p>
         </div>
         {/* География работы */}

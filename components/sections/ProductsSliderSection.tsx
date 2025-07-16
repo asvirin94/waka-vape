@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -181,10 +182,14 @@ const ProductsSliderSection: React.FC = () => {
               <div className="relative bg-black text-white border-2 md:border-4 border-white shadow-[4px_4px_0px_0px_#000000] md:shadow-[8px_8px_0px_0px_#000000] transition-all duration-300 overflow-hidden aspect-[5/8]">
                 {/* Product Image */}
                 <div className="absolute inset-0 overflow-hidden">
-                  <img
+                  <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={index < 3}
+                    {...(index >= 3 ? { loading: "lazy" } : {})}
                   />
                   {/* Puffs Badge - Top Right */}
                   <div className="absolute top-2 md:top-4 right-2 md:right-4 bg-[#1a41ae] text-white px-2 md:px-3 py-1 md:py-2 font-black text-xs md:text-sm border-1 md:border-2 border-white transform rotate-3 shadow-[2px_2px_0px_0px_#000000] md:shadow-[3px_3px_0px_0px_#000000]">

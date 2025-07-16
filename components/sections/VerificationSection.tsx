@@ -43,10 +43,11 @@ const VerificationSection: React.FC = () => (
         <div className="max-w-4xl mx-auto mb-12 md:mb-16">
           <div className="relative bg-gray-800 border-2 md:border-4 border-[#1a41ae] shadow-[4px_4px_0px_0px_#1a41ae] md:shadow-[8px_8px_0px_0px_#1a41ae] transform hover:translate-x-1 md:hover:translate-x-2 hover:translate-y-1 md:hover:translate-y-2 hover:shadow-[2px_2px_0px_0px_#1a41ae] md:hover:shadow-[4px_4px_0px_0px_#1a41ae] transition-all">
             <video
-              className="w-full h-64 md:h-80 lg:h-[420px] object-cover"
+              className="w-full h-40 md:h-64 lg:h-80 xl:h-[420px] object-cover"
               controls
               autoPlay
               muted
+              loading="lazy"
             >
               <source src="/instruction.mp4" type="video/mp4" />
               Ваш браузер не поддерживает видео.

@@ -1,14 +1,15 @@
 "use client"
 
 import type React from "react"
+import dynamic from "next/dynamic";
 import HeaderSection from "@/components/sections/HeaderSection"
 import { useState } from "react"
 import HeroSection from "@/components/sections/HeroSection"
-import AboutSection from "@/components/sections/AboutSection"
-import VerificationSection from "@/components/sections/VerificationSection"
-import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection"
-import ProductsSliderSection from "@/components/sections/ProductsSliderSection"
-import PartnershipSection from "@/components/sections/PartnershipSection"
+const AboutSection = dynamic(() => import("@/components/sections/AboutSection"), { ssr: false });
+const VerificationSection = dynamic(() => import("@/components/sections/VerificationSection"), { ssr: false });
+const WhyChooseUsSection = dynamic(() => import("@/components/sections/WhyChooseUsSection"), { ssr: false });
+const ProductsSliderSection = dynamic(() => import("@/components/sections/ProductsSliderSection"), { ssr: false });
+const PartnershipSection = dynamic(() => import("@/components/sections/PartnershipSection"), { ssr: false });
 import FooterSection from "@/components/sections/FooterSection"
 import { MarqueeComponent } from "@/components/Marquee"
 
