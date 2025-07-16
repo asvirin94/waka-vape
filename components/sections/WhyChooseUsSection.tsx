@@ -29,13 +29,13 @@ const advantages = [
 ];
 
 const WhyChooseUsSection: React.FC = () => (
-  <section className="w-full py-12 md:py-20 lg:py-32 bg-[#1D4ED8] text-white">
+  <section className="w-full py-12 md:py-20 lg:py-32 bg-[#1a41ae] text-white">
     <div className="container mx-auto px-4 md:px-6">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-4 md:mb-6 transform skew-x-2">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-2 transform skew-x-2">
           ПОЧЕМУ ВЫБИРАЮТ <span className="text-white">НАС</span>
         </h2>
-        <div className="w-32 md:w-48 h-2 md:h-3 bg-white mx-auto transform -skew-x-12 mb-4 md:mb-6"></div>
+        <div className="w-32 md:w-48 h-2 md:h-3 bg-white mx-auto transform -skew-x-12 mb-10"></div>
         <p className="text-lg md:text-xl lg:text-2xl font-bold max-w-4xl mx-auto">
           МЫ НЕ ПРОСТО ПРОДАЕМ — МЫ СОЗДАЕМ ИМПЕРИИ! ТВОЙ УСПЕХ — НАША РЕПУТАЦИЯ
         </p>

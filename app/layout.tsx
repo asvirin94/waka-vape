@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Roboto_Mono } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'WAKA VAPE',
 }
+
+const robotoMono = Roboto_Mono({ weight: ['400', '700'], subsets: ['cyrillic', 'latin'], display: 'swap', variable: '--font-roboto-mono' });
 
 export default function RootLayout({
   children,
@@ -13,8 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={robotoMono.variable}>
       <body>{children}</body>
     </html>
-  )
-}
+  )}

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: var(--font-roboto-mono), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -70,8 +73,8 @@
 
 /* Brutal Design Custom Styles */
 .text-stroke {
-  -webkit-text-stroke: 3px #1d4ed8;
-  text-stroke: 3px #1d4ed8;
+  -webkit-text-stroke: 3px #1a41ae;
+  text-stroke: 3px #1a41ae;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
 }
@@ -143,11 +146,11 @@
   bottom: 0;
   background: linear-gradient(
     45deg,
-    rgba(29, 78, 216, 0.1) 25%,
+    rgba(0, 30, 115, 0.2) 25%,
     transparent 25%,
     transparent 50%,
-    rgba(29, 78, 216, 0.1) 50%,
-    rgba(29, 78, 216, 0.1) 75%,
+    rgba(0, 30, 115, 0.2) 50%,
+    rgba(0, 30, 115, 0.2) 75%,
     transparent 75%,
     transparent
   );
@@ -177,4 +180,18 @@
 
 .mobile-menu.open {
   transform: translateX(0);
+}
+
+/* Swiper pagination bullets for products slider */
+.products-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 0.5rem;
+}
+.products-pagination .swiper-pagination-bullet {
+  @apply w-4 h-4 bg-white opacity-100 mx-1 rounded-full;
+}
+.products-pagination .swiper-pagination-bullet-active {
+  @apply bg-[#1a41ae];
 }
