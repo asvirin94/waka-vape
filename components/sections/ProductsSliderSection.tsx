@@ -32,7 +32,7 @@ const products = [
   {
     name: "xLand Spike 35000",
     puffs: "35000",
-    image: "/products/waka_xLand_Spike_35000.jpeg",
+    image: "/products/test.png",
     description: "xLand Spike 35000 — экстремальная производительность и уникальный стиль для настоящих лидеров.",
   },
   {
@@ -325,12 +325,15 @@ const ProductsSliderSection: React.FC = () => {
           >
             {products.map((product: {name: string, puffs?: string, image: string, description: string}, index: number) => (
               <SwiperSlide key={index} className="group cursor-pointer px-2 md:px-4">
-                <div className="relative bg-black text-white border-2 md:border-4 border-white shadow-[4px_4px_0px_0px_#000000] md:shadow-[8px_8px_0px_0px_#000000] transition-all duration-300 overflow-hidden aspect-[5/8]">
+                <div className="relative bg-white text-black border-2 md:border-4 border-white shadow-[4px_4px_0px_0px_#000000] md:shadow-[8px_8px_0px_0px_#000000] transition-all duration-300 overflow-hidden aspect-[5/8]">
                   <div className="absolute inset-0 overflow-hidden">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      className={
+                        "w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" +
+                        (product.name === "xLand Spike 35000" ? " scale-75 translate-x-8" : "")
+                      }
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       priority={index < 3}
