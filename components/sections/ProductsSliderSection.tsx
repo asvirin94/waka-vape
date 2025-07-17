@@ -185,9 +185,11 @@ const ProductsSliderSection: React.FC = () => {
                     />
                   </div>
                   {/* Puffs Badge - Top Right */}
-                  <div className="absolute top-2 md:top-4 right-2 md:right-4 bg-[#1a41ae] text-white px-2 md:px-3 py-1 md:py-2 font-black text-xs md:text-sm border-1 md:border-2 border-white transform rotate-3 shadow-[2px_2px_0px_0px_#000000] md:shadow-[3px_3px_0px_0px_#000000]">
-                    {product.puffs}
-                  </div>
+                  {product.puffs && (
+                    <div className="absolute top-2 md:top-4 right-2 md:right-4 bg-[#1a41ae] text-white px-2 md:px-3 py-1 md:py-2 font-black text-xs md:text-sm border-1 md:border-2 border-white transform rotate-3 shadow-[2px_2px_0px_0px_#000000] md:shadow-[3px_3px_0px_0px_#000000]">
+                      {product.puffs}
+                    </div>
+                  )}
                   {/* Product Name Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 md:p-6">
                     <h3 className="text-xl md:text-2xl font-black text-white transform -skew-x-1">{product.name}</h3>
