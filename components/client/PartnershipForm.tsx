@@ -17,6 +17,7 @@ const PartnershipForm: React.FC = () => {
     city: "",
   });
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -25,10 +26,31 @@ const PartnershipForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setOpen(true);
-    setFormData({ name: "", company: "", phone: "", email: "", city: "" });
+    setIsLoading(true);
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/76ac2f4b0094a44016a3321cbe44233e`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `Лендинг Waka — ${formData.name} — ${formData.company || 'Без компании'}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+      if (!res.ok) throw new Error('send_error');
+      setOpen(true);
+      setFormData({ name: '', company: '', phone: '', email: '', city: '' });
+    } catch (err) {
+      alert('⚠️ Ошибка при отправке заявки. Попробуйте позже.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -99,8 +121,9 @@ const PartnershipForm: React.FC = () => {
           <Button
             type="submit"
             className="w-full bg-[#1a41ae] hover:bg-[#153488] text-white font-black text-lg md:text-xl px-6 md:px-8 py-4 md:py-6 border-2 md:border-4 border-black shadow-[2px_2px_0px_0px_#000000] md:shadow-[4px_4px_0px_0px_#000000] transform hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_0px_#000000] md:hover:shadow-[2px_2px_0px_0px_#000000] transition-all"
+            disabled={isLoading}
           >
-            ОТПРАВИТЬ ЗАЯВКУ
+            {isLoading ? 'Отправка...' : 'ОТПРАВИТЬ ЗАЯВКУ'}
             <Target className="ml-2 md:ml-3 h-5 w-5 md:h-6 md:w-6" />
           </Button>
         </form>

@@ -12,130 +12,112 @@ import "swiper/css/pagination";
 
 const products = [
   {
-    name: "Solo",
-    puffs: "1800",
-    image: "/products/waka_solo.jpg",
-    description:
-      "Компактный и стильный Solo на 1800 затяжек — идеальный выбор для тех, кто ценит мобильность и насыщенный вкус.",
+    name: "Жидкости",
+    puffs: "",
+    image: "/products/waka_zhidkost.jpeg",
+    description: "Жидкости Waka — идеальное дополнение для вашего устройства, насыщенный вкус и максимальное удовольствие.",
   },
   {
-    name: "Slam",
-    puffs: "2300",
-    image: "/products/waka_slam.jpg",
-    description:
-      "Мощный Slam с 2300 затяжками — ударная доза вкуса для настоящих ценителей интенсивных ощущений.",
-  },
-  {
-    name: "Mirror",
-    puffs: "4500",
-    image: "/products/waka_mirror.jpg",
-    description:
-      "Mirror на 4500 затяжек — отражение идеального баланса аромата и табачного кайфа в вашем кармане.",
-  },
-  {
-    name: "SoPro 4500",
-    puffs: "4500",
-    image: "/products/waka_so_pro.jpg",
-    description:
-      "SoPro с 4500 затяжками — профессиональный уровень вкуса и надежности в компактном формате.",
-  },
-  {
-    name: "Smash",
-    puffs: "6000",
-    image: "/products/waka_smash_6000.jpg",
-    description:
-      "Разрушительная мощь Smash на 6000 затяжек подарит вам взрыв ароматов и впечатлений.",
-  },
-  {
-    name: "6000 (картриджная версия)",
-    puffs: "6000",
-    image: "/products/waka_6000_cart.jpg",
-    description:
-      "Картриджная версия на 6000 затяжек — просто меняйте картриджи и наслаждайтесь любимым вкусом без лишних хлопот.",
-  },
-  {
-    name: "DM",
-    puffs: "8000",
-    image: "/products/waka_dm_8000.jpg",
-    description:
-      "DM на 8000 затяжек — ультрасовременный дизайн и глубокие ноты вкуса для вашего комфорта.",
-  },
-  {
-    name: "i8000",
-    puffs: "8000",
-    image: "/products/waka_i8000.webp",
-    description:
-      "Инновационный i8000 с 8000 затяжками — сочетание передовых технологий и яркого вкуса.",
-  },
-  {
-    name: "SoPro 10000",
-    puffs: "10000",
-    image: "/products/waka_sopro_10000.jpg",
-    description:
-      "SoPro на 10000 затяжек — для тех, кто хочет максимально долго наслаждаться чистым и насыщенным вкусом.",
-  },
-  {
-    name: "Xland 15000",
-    puffs: "15000",
-    image: "/products/waka_xland.jpg",
-    description:
-      "Xland с 15000 затяжками — экстремальная дальность аромата для самых требовательных пользователей.",
-  },
-  {
-    name: "SoPro 20000",
-    puffs: "20000",
-    image: "/products/waka_sopro_20000.jpg",
-    description:
-      "SoPro на 20000 затяжек — профессиональная линейка для длительного и стабильного парения.",
-  },
-  {
-    name: "Xland 25000",
-    puffs: "25000",
-    image: "/products/waka_xland_25000.jpg",
-    description:
-      "Xland с 25000 затяжками — рекордные показатели вкуса и объёма для настоящих рекордсменов.",
-  },
-  {
-    name: "SoPro 28000",
-    puffs: "28000",
-    image: "/products/waka_sopro_28000.jpg",
-    description:
-      "SoPro на 28000 затяжек — бескомпромиссный выбор для тех, кто хочет больше и дольше.",
-  },
-  {
-    name: "Upiter",
-    puffs: "30000",
-    image: "/products/waka_upiter.webp",
-    description:
-      "Космический Upiter с 30000 затяжками — отправляйтесь в межгалактическое путешествие вкуса.",
-  },
-  {
-    name: "Xland 35000",
+    name: "E.T. Cyber 35000",
     puffs: "35000",
-    image: "/products/waka_xland_35000.webp",
-    description:
-      "Xland на 35000 затяжек — экстремальная производительность и фантастический вкус в каждом вдохе.",
+    image: "/products/waka_E.T._cyber_35000.jpeg",
+    description: "E.T. Cyber 35000 — футуристический дизайн и 35000 затяжек для тех, кто стремится к новым ощущениям.",
   },
   {
-    name: "Blast 36000",
-    puffs: "36000",
-    image: "/products/waka_blast_36000.jpg",
-    description:
-      "Взрывной Blast с 36000 затяжками — максимальная отдача аромата и длительность работы.",
+    name: "Burst 41000",
+    puffs: "41000",
+    image: "/products/waka_burst_41000.jpeg",
+    description: "Burst 41000 — всплеск аромата и максимальная автономность для истинных гурманов.",
   },
   {
     name: "Blast 38000",
     puffs: "38000",
-    image: "/products/waka_blast_38000.webp",
-    description:
-      "Новая версия Blast на 38000 затяжек — ещё больше взрывных впечатлений и насыщенности.",
+    image: "/products/waka_blast_38000.jpeg",
+    description: "Blast 38000 — взрывной вкус и рекордная автономность для самых требовательных.",
   },
   {
-    name: "Burst",
-    puffs: "41000",
-    image: "/products/waka_burst.webp",
-    description:
-      "Burst с 41000 затяжками — всплеск ароматов и максимальная автономность для истинных гурманов.",
+    name: "xLand Spike 35000",
+    puffs: "35000",
+    image: "/products/waka_xLand_Spike_35000.jpeg",
+    description: "xLand Spike 35000 — экстремальная производительность и уникальный стиль для настоящих лидеров.",
+  },
+  {
+    name: "Jupiter 30000",
+    puffs: "30000",
+    image: "/products/waka_jupiter_30000.jpeg",
+    description: "Jupiter 30000 — космическое количество затяжек и незабываемый вкус в каждой из них.",
+  },
+  {
+    name: "SoPro 20000",
+    puffs: "20000",
+    image: "/products/waka_soPro_20000.jpeg",
+    description: "SoPro 20000 — профессиональная линейка для длительного и стабильного парения.",
+  },
+  {
+    name: "xLand 15000",
+    puffs: "15000",
+    image: "/products/waka_xLand_15000.jpeg",
+    description: "xLand 15000 — дальний путь вкуса и насыщенности для самых требовательных пользователей.",
+  },
+  {
+    name: "SoPro PA10000",
+    puffs: "10000",
+    image: "/products/waka_soPro_PA10000.jpeg",
+    description: "SoPro PA10000 — 10000 затяжек для тех, кто выбирает максимум вкуса и стиля.",
+  },
+  {
+    name: "SoPro 10000",
+    puffs: "10000",
+    image: "/products/waka_soPro_10000.jpeg",
+    description: "SoPro 10000 — 10000 затяжек профессионального вкуса и надёжности.",
+  },
+  {
+    name: "DM 8000i",
+    puffs: "8000",
+    image: "/products/waka_dm_8000i.jpeg",
+    description: "DM 8000i — инновации и 8000 затяжек ярких впечатлений для требовательных пользователей.",
+  },
+  {
+    name: "DM 8000",
+    puffs: "8000",
+    image: "/products/waka_dm_8000.jpg",
+    description: "DM 8000 — современный дизайн и 8000 затяжек для долгого наслаждения любимым вкусом.",
+  },
+  {
+    name: "SoPro PA7000",
+    puffs: "7000",
+    image: "/products/waka_soPro_PA7000.jpeg",
+    description: "SoPro PA7000 — 7000 затяжек насыщенного вкуса и комфорта в каждом вдохе.",
+  },
+  {
+    name: "Smash 6000",
+    puffs: "6000",
+    image: "/products/waka_smash_6000.jpg",
+    description: "Smash на 6000 затяжек — взрывной вкус и максимальное удовольствие в каждой затяжке.",
+  },
+  {
+    name: "soFit FA4500",
+    puffs: "4500",
+    image: "/products/waka_soFit_FA4500.jpeg",
+    description: "SoFit FA4500 — 4500 затяжек чистого вкуса и комфорта для тех, кто ценит качество.",
+  },
+  {
+    name: "Mirror 4500",
+    puffs: "4500",
+    image: "/products/waka_mirror_4500.jpeg",
+    description: "Mirror на 4500 затяжек — отражение баланса аромата и удовольствия в каждом вдохе.",
+  },
+  {
+    name: "Slam 2300",
+    puffs: "2300",
+    image: "/products/waka_slam_2300.jpg",
+    description: "Slam на 2300 затяжек — мощный заряд вкуса и энергии для настоящих ценителей насыщенности.",
+  },
+  {
+    name: "Solo 1800",
+    puffs: "1800",
+    image: "/products/waka_solo.jpeg",
+    description: "Лёгкая и стильная Solo на 1800 затяжек — идеальный спутник для динамичной жизни и ярких вкусовых ощущений.",
   },
 ];
 
@@ -169,9 +151,11 @@ const ProductsSliderSection: React.FC = () => {
           breakpoints={{
             640: {
               slidesPerView: 2,
+              slidesPerGroup: 2,
             },
             1024: {
               slidesPerView: 3,
+              slidesPerGroup: 3,
             },
           }}
           slidesPerGroup={1}
@@ -180,7 +164,6 @@ const ProductsSliderSection: React.FC = () => {
           {products.map((product, index) => (
             <SwiperSlide key={index} className="group cursor-pointer px-2 md:px-4">
               <div className="relative bg-black text-white border-2 md:border-4 border-white shadow-[4px_4px_0px_0px_#000000] md:shadow-[8px_8px_0px_0px_#000000] transition-all duration-300 overflow-hidden aspect-[5/8]">
-                {/* Product Image */}
                 <div className="absolute inset-0 overflow-hidden">
                   <Image
                     src={product.image || "/placeholder.svg"}
@@ -191,6 +174,16 @@ const ProductsSliderSection: React.FC = () => {
                     priority={index < 3}
                     {...(index >= 3 ? { loading: "lazy" } : {})}
                   />
+                  <div className="absolute top-2 left-2 z-20 w-8 h-8 md:w-12 md:h-12">
+                    <Image
+                      src="/waka_black_logo.png"
+                      alt="Waka logo"
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-contain"
+                      priority={false}
+                    />
+                  </div>
                   {/* Puffs Badge - Top Right */}
                   <div className="absolute top-2 md:top-4 right-2 md:right-4 bg-[#1a41ae] text-white px-2 md:px-3 py-1 md:py-2 font-black text-xs md:text-sm border-1 md:border-2 border-white transform rotate-3 shadow-[2px_2px_0px_0px_#000000] md:shadow-[3px_3px_0px_0px_#000000]">
                     {product.puffs}
@@ -200,7 +193,7 @@ const ProductsSliderSection: React.FC = () => {
                     <h3 className="text-xl md:text-2xl font-black text-white transform -skew-x-1">{product.name}</h3>
                   </div>
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-[#1a41ae]/95 text-white p-4 md:p-6 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-[#1a41ae]/95 text-white p-4 md:p-6 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
                     <div className="text-center space-y-4 md:space-y-6">
                       <h3 className="text-2xl md:text-3xl font-black transform -skew-x-1">{product.name}</h3>
                       <div className="w-16 md:w-20 h-1 md:h-2 bg-white mx-auto transform skew-x-12"></div>

@@ -17,10 +17,16 @@ export const HeaderSection: React.FC = () => {
     <div className="container mx-auto px-4 lg:px-6 flex items-center h-full">
       <Link href="/" className="flex items-center justify-center">
         <div className="flex items-center space-x-2 md:space-x-3">
-          <div className="w-8 h-8 md:w-12 md:h-12 bg-[#1a41ae] border-2 md:border-4 border-white transform rotate-3 flex items-center justify-center shadow-[2px_2px_0px_0px_#ffffff] md:shadow-[4px_4px_0px_0px_#ffffff]">
-            <span className="text-white font-black text-sm md:text-xl transform -rotate-3">W</span>
+          <div className="w-12 h-12 md:w-16 md:h-16">
+            <img
+              src="/waka_blue_logo.png"
+              alt="Waka logo"
+              className="w-full h-full object-contain"
+              width={64}
+              height={64}
+            />
           </div>
-          <span className="font-black text-lg md:text-2xl tracking-tight transform -skew-x-6">WAKA</span>
+          {/* <span className="font-black text-lg md:text-2xl tracking-tight transform -skew-x-6">WAKA</span> */}
         </div>
       </Link>
       {/* Desktop Navigation */}
